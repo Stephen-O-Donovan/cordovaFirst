@@ -4,7 +4,25 @@
     var app = angular.module('cordovaAngularApp', []);
 
     app.config(function($routeProvider){
+        $routeProvider
 
+        //route for home page
+        .when('/home', {
+            templateUrl : home/home.html,
+            controller : 'homeController'
+        })
+
+        //route for login page
+        .when('/login', {
+            templateUrl : login/login.html,
+            controller : 'loginController'
+        })
+
+        //route for register page
+        .when('/register', {
+            templateUrl : register/register.html,
+            controller : 'registerController'
+        });
     });
 
     // creating the controller and inject Angular's $scope
